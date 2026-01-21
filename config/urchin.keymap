@@ -90,7 +90,7 @@
                 &kp Q       &kp W      &kp E      &kp R       &kp T          &kp Y      &kp U       &kp I      &kp O      &kp P
                 HRML(A,         S,         D,         F)      &kp G          &kp H      HRMR(J,         K,         L,         SEMI)
                 &kp Z       &kp X      &kp C      &kp V       &kp B          &kp N      &kp M       &kp COMMA  &kp DOT    &kp FSLH
-                                          &lt_hp NAV BSPC    &lt_sk NUM LSHFT &lt_hp SYM SPACE &lt_hp FUN RET
+                                          &lt_hp NAV BSPC    &lt_sk NUM TAB &lt_hp SYM SPACE &lt_hp FUN RET
             >;
         };
 
