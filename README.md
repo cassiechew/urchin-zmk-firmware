@@ -1,3 +1,5 @@
+[![.github/workflows/build.yml](https://github.com/cassiechew/urchin-zmk-firmware/actions/workflows/build.yml/badge.svg)](https://github.com/cassiechew/urchin-zmk-firmware/actions/workflows/build.yml)
+
 Firmware for: [Urchin Keyboard](https://github.com/duckyb/urchin)
 
 ## Getting started
