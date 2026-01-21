@@ -1,4 +1,6 @@
-#include <behaviors.dtsi>
+nav_layer {
+            display-name = "NAV";
+            bindings = #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/mouse.h>
@@ -38,6 +40,15 @@
             quick-tap-ms = <150>;
             bindings = <&mo>, <&kp>;
         };
+
+        lt_sk: layer_tap_sticky {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            bindings = <&mo>, <&sk>;
+        };
     };
 
     combos {
@@ -46,7 +57,7 @@
         // J + K = Escape
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <15 16>;
+            key-positions = <16 17>;
             bindings = <&kp ESC>;
             layers = <BASE>;
         };
@@ -82,12 +93,11 @@
         // │  Z  │  X  │  C  │  V  │  B  │               │  N  │  M  │  ,  │  .  │  /  │
         // ╰─────────────────────╮ NAV/Bsp │ NUM/Sft │   │ SYM/Spc │ FUN/Ent ╭─────────────────────╯
         //                       ╰─────────────────────╯ ╰─────────────────────╯
-        base_layer {
-            bindings = <
+<
                 &kp Q       &kp W      &kp E      &kp R       &kp T          &kp Y      &kp U       &kp I      &kp O      &kp P
                 HRML(A,         S,         D,         F)      &kp G          &kp H      HRMR(J,         K,         L,         SEMI)
                 &kp Z       &kp X      &kp C      &kp V       &kp B          &kp N      &kp M       &kp COMMA  &kp DOT    &kp FSLH
-                                          &lt_hp NAV BSPC    &lt_hp NUM LSHFT &lt_hp SYM SPACE &lt_hp FUN RET
+                                          &lt_hp NAV BSPC    &lt_sk NUM LSHFT &lt_hp SYM SPACE &lt_hp FUN RET
             >;
         };
 
@@ -113,6 +123,7 @@
         // ╰─────────────────────╮     │ ### │           │  0  │  .  ╭─────────────────────╯
         //                       ╰─────────────────────╯ ╰─────────────────────╯
         num_layer {
+            display-name = "NUM";
             bindings = <
                 &none       &none      &none      &none       &none          &kp LBKT   &kp N7      &kp N8     &kp N9     &kp RBKT
                 &kp LCTRL   &kp LALT   &kp LGUI   &kp LSHFT   &none          &kp SEMI   &kp N4      &kp N5     &kp N6     &kp EQUAL
@@ -128,6 +139,7 @@
         // ╰─────────────────────╮  :  │  |  │           │ ### │     ╭─────────────────────╯
         //                       ╰─────────────────────╯ ╰─────────────────────╯
         sym_layer {
+            display-name = "SYM";
             bindings = <
                 &kp GRAVE   &kp LT     &kp GT     &kp TILDE   &kp CARET      &none      &none       &none      &none      &none
                 &kp MINUS   &kp LBRC   &kp RBRC   &kp EQUAL   &kp PLUS       &none      &kp RSHFT   &kp RGUI   &kp RALT   &kp RCTRL
@@ -143,6 +155,7 @@
         // ╰─────────────────────╮     │     │           │ App │ Spc ╭─────────────────────╯
         //                       ╰─────────────────────╯ ╰─────────────────────╯
         fun_layer {
+            display-name = "FUN";
             bindings = <
                 &none       &none      &none      &none       &none          &kp PSCRN  &kp F7      &kp F8     &kp F9     &kp F12
                 &kp LCTRL   &kp LALT   &kp LGUI   &kp LSHFT   &none          &kp SLCK   &kp F4      &kp F5     &kp F6     &kp F11
@@ -158,6 +171,7 @@
         // ╰─────────────────────╮ ### │ ### │           │Stop │Play ╭─────────────────────╯
         //                       ╰─────────────────────╯ ╰─────────────────────╯
         media_layer {
+            display-name = "MEDIA";
             bindings = <
                 &none       &none      &none      &none       &none          &none      &none       &none      &none      &none
                 &kp LCTRL   &kp LALT   &kp LGUI   &kp LSHFT   &none          &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &none
@@ -168,16 +182,17 @@
 
         // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
         // │     │     │     │     │     │               │     │     │     │     │     │
-        // │ Ctl │ Alt │ Gui │ Sft │     │               │     │ M ← │ M ↓ │ M ↑ │ M → │
-        // │     │     │     │     │     │               │     │Whl←│Whl↓ │Whl↑ │Whl→ │
-        // ╰─────────────────────╮     │     │           │ Mb2 │ Mb1 ╭─────────────────────╯
+        // │ Ctl │ Alt │ Gui │ Sft │     │               │     │     │     │     │     │
+        // │     │     │     │     │     │               │     │     │     │     │     │
+        // ╰─────────────────────╮     │     │           │     │     ╭─────────────────────╯
         //                       ╰─────────────────────╯ ╰─────────────────────╯
         mouse_layer {
+            display-name = "MOUSE";
             bindings = <
                 &none       &none      &none      &none       &none          &none      &none       &none      &none      &none
-                &kp LCTRL   &kp LALT   &kp LGUI   &kp LSHFT   &none          &none      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT
-                &none       &none      &none      &none       &none          &none      &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT
-                                                  &none       &none          &mkp MB2   &mkp MB1
+                &kp LCTRL   &kp LALT   &kp LGUI   &kp LSHFT   &none          &none      &none       &none      &none      &none
+                &none       &none      &none      &none       &none          &none      &none       &none      &none      &none
+                                                  &none       &none          &none      &none
             >;
         };
 
@@ -188,6 +203,7 @@
         // ╰─────────────────────╮ ### │     │           │     │ ### ╭─────────────────────╯
         //                       ╰─────────────────────╯ ╰─────────────────────╯
         settings_layer {
+            display-name = "SETTINGS";
             bindings = <
                 &bootloader &none      &none      &bt BT_CLR  &bt BT_SEL 0   &bt BT_SEL 3 &none      &none      &none      &bootloader
                 &none       &none      &none      &none       &bt BT_SEL 1   &bt BT_SEL 4 &none      &none      &none      &none
