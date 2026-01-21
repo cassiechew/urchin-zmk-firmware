@@ -118,7 +118,7 @@
             display-name = "SYM";
             bindings = <
                 &kp GRAVE   &kp LT     &kp GT     &kp TILDE   &kp CARET      &none      &none       &none      &none      &none
-                &kp MINUS   &kp LBRC   &kp RBRC   &kp EQUAL   &kp PLUS       &none      &kp RSHFT   &kp RGUI   &kp RALT   &kp RCTRL
+                &kp MINUS   &kp LBRC   &kp RBRC   &kp EQUAL   &kp PLUS       &none      &none       &kp APOS      &none      &none
                 &kp UNDER   &kp LPAR   &kp RPAR   &kp LBKT    &kp RBKT       &none      &none       &none      &none      &none
                                                   &kp COLON   &kp PIPE       &trans     &none
             >;
