@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/mouse.h>
 
 // Layer definitions
 #define BASE 0
@@ -91,16 +92,16 @@
         };
 
         // ╭─────────────────────────────────────────────╮ ╭─────────────────────────────────────────────╮
-        // │ Redo│Paste│Copy │ Cut │Undo │               │     │     │     │     │     │
+        // │     │     │     │     │     │               │     │     │     │     │     │
         // │ Ctl │ Alt │ Gui │ Sft │     │               │Caps │  ←  │  ↓  │  ↑  │  →  │
-        // │     │     │     │     │     │               │ Ins │Home │PgDn │PgUp │ End │
+        // │Undo │ Cut │Copy │Paste│Redo │               │ Ins │Home │PgDn │PgUp │ End │
         // ╰─────────────────────╮ ### │     │           │ Ent │ Bsp ╭─────────────────────╯
         //                       ╰─────────────────────╯ ╰─────────────────────╯
         nav_layer {
             bindings = <
-                &none      &none       &none      &none      &none     &none      &none       &none      &none      &none
+                &none       &none      &none      &none       &none          &none      &none       &none      &none      &none
                 &kp LCTRL   &kp LALT   &kp LGUI   &kp LSHFT   &none          &kp CAPS   &kp LEFT    &kp DOWN   &kp UP     &kp RIGHT
-                &kp K_REDO  &kp K_PASTE &kp K_COPY &kp K_CUT  &kp K_UNDO          &kp INS    &kp HOME    &kp PG_DN  &kp PG_UP  &kp END
+                &kp K_UNDO  &kp K_CUT  &kp K_COPY &kp K_PASTE &kp K_REDO     &kp INS    &kp HOME    &kp PG_DN  &kp PG_UP  &kp END
                                                   &trans      &none          &kp RET    &kp BSPC
             >;
         };
