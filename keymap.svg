@@ -1,0 +1,350 @@
+<svg viewBox="0 0 800 1100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f1a"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <style>
+    .key { fill: #374151; stroke: #4b5563; stroke-width: 1; rx: 4; }
+    .key-mod { fill: #4c1d95; stroke: #7c3aed; }
+    .key-empty { fill: #1f2937; stroke: #374151; stroke-dasharray: 3,2; }
+    .key-text { fill: #fff; font-family: system-ui, -apple-system, sans-serif; font-size: 10px; text-anchor: middle; dominant-baseline: middle; }
+    .key-text-small { fill: #a78bfa; font-family: system-ui, sans-serif; font-size: 7px; text-anchor: middle; }
+    .thumb { rx: 6; }
+    .thumb-nav { fill: #3b82f6; stroke: #60a5fa; }
+    .thumb-num { fill: #10b981; stroke: #34d399; }
+    .thumb-sym { fill: #f59e0b; stroke: #fbbf24; }
+    .thumb-fun { fill: #ef4444; stroke: #f87171; }
+    .thumb-gray { fill: #4b5563; stroke: #6b7280; }
+    .layer-title { fill: #fff; font-family: system-ui, sans-serif; font-size: 14px; font-weight: 600; }
+    .layer-subtitle { fill: #9ca3af; font-family: system-ui, sans-serif; font-size: 10px; }
+    .layer-box { fill: #111827; stroke: #374151; stroke-width: 1; rx: 12; }
+    .section-title { fill: #fbbf24; font-family: system-ui, sans-serif; font-size: 12px; font-weight: 600; }
+    .legend-text { fill: #d1d5db; font-family: system-ui, sans-serif; font-size: 10px; }
+    .combo-box { fill: #1f2937; rx: 4; }
+    .combo-text { fill: #fff; font-family: monospace; font-size: 9px; text-anchor: middle; }
+    .main-title { fill: #fff; font-family: system-ui, sans-serif; font-size: 24px; font-weight: 700; }
+    .main-subtitle { fill: #9ca3af; font-family: system-ui, sans-serif; font-size: 12px; }
+    .dot { r: 5; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="1100" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="400" y="35" class="main-title" text-anchor="middle">Urchin Keymap</text>
+  <text x="400" y="55" class="main-subtitle" text-anchor="middle">34-key Miryoku-inspired layout for Neovim • QWERTY + CAGS Homerow Mods</text>
+
+  <!-- Combos Section -->
+  <rect x="20" y="70" width="760" height="45" class="layer-box"/>
+  <text x="40" y="88" class="section-title">⚡ Combos</text>
+  <rect x="40" y="95" width="55" height="16" class="combo-box"/><text x="67" y="105" class="combo-text">J + K</text>
+  <text x="105" y="105" class="legend-text">→ Escape</text>
+  <rect x="200" y="95" width="110" height="16" class="combo-box"/><text x="255" y="105" class="combo-text">Both Left Thumbs</text>
+  <text x="320" y="105" class="legend-text">→ Media</text>
+  <rect x="420" y="95" width="115" height="16" class="combo-box"/><text x="477" y="105" class="combo-text">Both Right Thumbs</text>
+  <text x="545" y="105" class="legend-text">→ Mouse</text>
+  <rect x="620" y="95" width="115" height="16" class="combo-box"/><text x="677" y="105" class="combo-text">Both Inner Thumbs</text>
+  <text x="745" y="105" class="legend-text">→ Settings</text>
+
+  <!-- BASE LAYER -->
+  <rect x="20" y="125" width="370" height="145" class="layer-box" filter="url(#shadow)"/>
+  <circle cx="35" cy="142" class="dot" fill="#8b5cf6"/>
+  <text x="50" y="145" class="layer-title">BASE</text>
+  <text x="95" y="145" class="layer-subtitle">QWERTY + Homerow Mods</text>
+  <!-- Left hand -->
+  <rect x="30" y="155" width="32" height="32" class="key"/><text x="46" y="173" class="key-text">Q</text>
+  <rect x="65" y="155" width="32" height="32" class="key"/><text x="81" y="173" class="key-text">W</text>
+  <rect x="100" y="155" width="32" height="32" class="key"/><text x="116" y="173" class="key-text">E</text>
+  <rect x="135" y="155" width="32" height="32" class="key"/><text x="151" y="173" class="key-text">R</text>
+  <rect x="170" y="155" width="32" height="32" class="key"/><text x="186" y="173" class="key-text">T</text>
+  <rect x="30" y="190" width="32" height="32" class="key key-mod"/><text x="46" y="205" class="key-text">A</text><text x="46" y="215" class="key-text-small">Ctrl</text>
+  <rect x="65" y="190" width="32" height="32" class="key key-mod"/><text x="81" y="205" class="key-text">S</text><text x="81" y="215" class="key-text-small">Alt</text>
+  <rect x="100" y="190" width="32" height="32" class="key key-mod"/><text x="116" y="205" class="key-text">D</text><text x="116" y="215" class="key-text-small">Gui</text>
+  <rect x="135" y="190" width="32" height="32" class="key key-mod"/><text x="151" y="205" class="key-text">F</text><text x="151" y="215" class="key-text-small">Shft</text>
+  <rect x="170" y="190" width="32" height="32" class="key"/><text x="186" y="208" class="key-text">G</text>
+  <rect x="30" y="225" width="32" height="32" class="key"/><text x="46" y="243" class="key-text">Z</text>
+  <rect x="65" y="225" width="32" height="32" class="key"/><text x="81" y="243" class="key-text">X</text>
+  <rect x="100" y="225" width="32" height="32" class="key"/><text x="116" y="243" class="key-text">C</text>
+  <rect x="135" y="225" width="32" height="32" class="key"/><text x="151" y="243" class="key-text">V</text>
+  <rect x="170" y="225" width="32" height="32" class="key"/><text x="186" y="243" class="key-text">B</text>
+  <!-- Right hand -->
+  <rect x="215" y="155" width="32" height="32" class="key"/><text x="231" y="173" class="key-text">Y</text>
+  <rect x="250" y="155" width="32" height="32" class="key"/><text x="266" y="173" class="key-text">U</text>
+  <rect x="285" y="155" width="32" height="32" class="key"/><text x="301" y="173" class="key-text">I</text>
+  <rect x="320" y="155" width="32" height="32" class="key"/><text x="336" y="173" class="key-text">O</text>
+  <rect x="355" y="155" width="32" height="32" class="key"/><text x="371" y="173" class="key-text">P</text>
+  <rect x="215" y="190" width="32" height="32" class="key"/><text x="231" y="208" class="key-text">H</text>
+  <rect x="250" y="190" width="32" height="32" class="key key-mod"/><text x="266" y="205" class="key-text">J</text><text x="266" y="215" class="key-text-small">Shft</text>
+  <rect x="285" y="190" width="32" height="32" class="key key-mod"/><text x="301" y="205" class="key-text">K</text><text x="301" y="215" class="key-text-small">Gui</text>
+  <rect x="320" y="190" width="32" height="32" class="key key-mod"/><text x="336" y="205" class="key-text">L</text><text x="336" y="215" class="key-text-small">Alt</text>
+  <rect x="355" y="190" width="32" height="32" class="key key-mod"/><text x="371" y="205" class="key-text">;</text><text x="371" y="215" class="key-text-small">Ctrl</text>
+  <rect x="215" y="225" width="32" height="32" class="key"/><text x="231" y="243" class="key-text">N</text>
+  <rect x="250" y="225" width="32" height="32" class="key"/><text x="266" y="243" class="key-text">M</text>
+  <rect x="285" y="225" width="32" height="32" class="key"/><text x="301" y="243" class="key-text">,</text>
+  <rect x="320" y="225" width="32" height="32" class="key"/><text x="336" y="243" class="key-text">.</text>
+  <rect x="355" y="225" width="32" height="32" class="key"/><text x="371" y="243" class="key-text">/</text>
+  <!-- Thumbs -->
+  <rect x="135" y="260" width="32" height="24" class="key thumb thumb-nav"/><text x="151" y="269" class="key-text" style="font-size:7px">NAV</text><text x="151" y="278" class="key-text" style="font-size:6px">Bksp</text>
+  <rect x="170" y="260" width="32" height="24" class="key thumb thumb-num"/><text x="186" y="269" class="key-text" style="font-size:7px">NUM</text><text x="186" y="278" class="key-text" style="font-size:6px">Shft</text>
+  <rect x="215" y="260" width="32" height="24" class="key thumb thumb-sym"/><text x="231" y="269" class="key-text" style="font-size:7px">SYM</text><text x="231" y="278" class="key-text" style="font-size:6px">Space</text>
+  <rect x="250" y="260" width="32" height="24" class="key thumb thumb-fun"/><text x="266" y="269" class="key-text" style="font-size:7px">FUN</text><text x="266" y="278" class="key-text" style="font-size:6px">Enter</text>
+
+  <!-- NAV LAYER -->
+  <rect x="410" y="125" width="370" height="145" class="layer-box" filter="url(#shadow)"/>
+  <circle cx="425" cy="142" class="dot" fill="#3b82f6"/>
+  <text x="440" y="145" class="layer-title">NAV</text>
+  <text x="475" y="145" class="layer-subtitle">Hold Left Inner Thumb</text>
+  <!-- Left hand -->
+  <rect x="420" y="155" width="32" height="32" class="key key-empty"/>
+  <rect x="455" y="155" width="32" height="32" class="key key-empty"/>
+  <rect x="490" y="155" width="32" height="32" class="key key-empty"/>
+  <rect x="525" y="155" width="32" height="32" class="key key-empty"/>
+  <rect x="560" y="155" width="32" height="32" class="key key-empty"/>
+  <rect x="420" y="190" width="32" height="32" class="key key-mod"/><text x="436" y="208" class="key-text" style="font-size:8px">Ctrl</text>
+  <rect x="455" y="190" width="32" height="32" class="key key-mod"/><text x="471" y="208" class="key-text" style="font-size:8px">Alt</text>
+  <rect x="490" y="190" width="32" height="32" class="key key-mod"/><text x="506" y="208" class="key-text" style="font-size:8px">Gui</text>
+  <rect x="525" y="190" width="32" height="32" class="key key-mod"/><text x="541" y="208" class="key-text" style="font-size:8px">Shft</text>
+  <rect x="560" y="190" width="32" height="32" class="key key-empty"/>
+  <rect x="420" y="225" width="32" height="32" class="key"/><text x="436" y="243" class="key-text" style="font-size:7px">Undo</text>
+  <rect x="455" y="225" width="32" height="32" class="key"/><text x="471" y="243" class="key-text" style="font-size:8px">Cut</text>
+  <rect x="490" y="225" width="32" height="32" class="key"/><text x="506" y="243" class="key-text" style="font-size:7px">Copy</text>
+  <rect x="525" y="225" width="32" height="32" class="key"/><text x="541" y="243" class="key-text" style="font-size:7px">Paste</text>
+  <rect x="560" y="225" width="32" height="32" class="key"/><text x="576" y="243" class="key-text" style="font-size:7px">Redo</text>
+  <!-- Right hand -->
+  <rect x="605" y="155" width="32" height="32" class="key key-empty"/>
+  <rect x="640" y="155" width="32" height="32" class="key key-empty"/>
+  <rect x="675" y="155" width="32" height="32" class="key key-empty"/>
+  <rect x="710" y="155" width="32" height="32" class="key key-empty"/>
+  <rect x="745" y="155" width="32" height="32" class="key key-empty"/>
+  <rect x="605" y="190" width="32" height="32" class="key"/><text x="621" y="208" class="key-text" style="font-size:7px">Caps</text>
+  <rect x="640" y="190" width="32" height="32" class="key"/><text x="656" y="208" class="key-text">←</text>
+  <rect x="675" y="190" width="32" height="32" class="key"/><text x="691" y="208" class="key-text">↓</text>
+  <rect x="710" y="190" width="32" height="32" class="key"/><text x="726" y="208" class="key-text">↑</text>
+  <rect x="745" y="190" width="32" height="32" class="key"/><text x="761" y="208" class="key-text">→</text>
+  <rect x="605" y="225" width="32" height="32" class="key"/><text x="621" y="243" class="key-text" style="font-size:8px">Ins</text>
+  <rect x="640" y="225" width="32" height="32" class="key"/><text x="656" y="243" class="key-text" style="font-size:7px">Home</text>
+  <rect x="675" y="225" width="32" height="32" class="key"/><text x="691" y="243" class="key-text" style="font-size:7px">PgDn</text>
+  <rect x="710" y="225" width="32" height="32" class="key"/><text x="726" y="243" class="key-text" style="font-size:7px">PgUp</text>
+  <rect x="745" y="225" width="32" height="32" class="key"/><text x="761" y="243" class="key-text" style="font-size:8px">End</text>
+
+  <!-- NUM LAYER -->
+  <rect x="20" y="280" width="370" height="145" class="layer-box" filter="url(#shadow)"/>
+  <circle cx="35" cy="297" class="dot" fill="#10b981"/>
+  <text x="50" y="300" class="layer-title">NUM</text>
+  <text x="90" y="300" class="layer-subtitle">Hold Left Outer Thumb</text>
+  <!-- Left hand - empty with mods -->
+  <rect x="30" y="310" width="32" height="32" class="key key-empty"/>
+  <rect x="65" y="310" width="32" height="32" class="key key-empty"/>
+  <rect x="100" y="310" width="32" height="32" class="key key-empty"/>
+  <rect x="135" y="310" width="32" height="32" class="key key-empty"/>
+  <rect x="170" y="310" width="32" height="32" class="key key-empty"/>
+  <rect x="30" y="345" width="32" height="32" class="key key-mod"/><text x="46" y="363" class="key-text" style="font-size:8px">Ctrl</text>
+  <rect x="65" y="345" width="32" height="32" class="key key-mod"/><text x="81" y="363" class="key-text" style="font-size:8px">Alt</text>
+  <rect x="100" y="345" width="32" height="32" class="key key-mod"/><text x="116" y="363" class="key-text" style="font-size:8px">Gui</text>
+  <rect x="135" y="345" width="32" height="32" class="key key-mod"/><text x="151" y="363" class="key-text" style="font-size:8px">Shft</text>
+  <rect x="170" y="345" width="32" height="32" class="key key-empty"/>
+  <rect x="30" y="380" width="32" height="32" class="key key-empty"/>
+  <rect x="65" y="380" width="32" height="32" class="key key-empty"/>
+  <rect x="100" y="380" width="32" height="32" class="key key-empty"/>
+  <rect x="135" y="380" width="32" height="32" class="key key-empty"/>
+  <rect x="170" y="380" width="32" height="32" class="key key-empty"/>
+  <!-- Right hand - numpad -->
+  <rect x="215" y="310" width="32" height="32" class="key"/><text x="231" y="328" class="key-text">[</text>
+  <rect x="250" y="310" width="32" height="32" class="key"/><text x="266" y="328" class="key-text">7</text>
+  <rect x="285" y="310" width="32" height="32" class="key"/><text x="301" y="328" class="key-text">8</text>
+  <rect x="320" y="310" width="32" height="32" class="key"/><text x="336" y="328" class="key-text">9</text>
+  <rect x="355" y="310" width="32" height="32" class="key"/><text x="371" y="328" class="key-text">]</text>
+  <rect x="215" y="345" width="32" height="32" class="key"/><text x="231" y="363" class="key-text">;</text>
+  <rect x="250" y="345" width="32" height="32" class="key"/><text x="266" y="363" class="key-text">4</text>
+  <rect x="285" y="345" width="32" height="32" class="key"/><text x="301" y="363" class="key-text">5</text>
+  <rect x="320" y="345" width="32" height="32" class="key"/><text x="336" y="363" class="key-text">6</text>
+  <rect x="355" y="345" width="32" height="32" class="key"/><text x="371" y="363" class="key-text">=</text>
+  <rect x="215" y="380" width="32" height="32" class="key"/><text x="231" y="398" class="key-text">`</text>
+  <rect x="250" y="380" width="32" height="32" class="key"/><text x="266" y="398" class="key-text">1</text>
+  <rect x="285" y="380" width="32" height="32" class="key"/><text x="301" y="398" class="key-text">2</text>
+  <rect x="320" y="380" width="32" height="32" class="key"/><text x="336" y="398" class="key-text">3</text>
+  <rect x="355" y="380" width="32" height="32" class="key"/><text x="371" y="398" class="key-text">\</text>
+  <!-- Thumbs -->
+  <rect x="215" y="415" width="32" height="24" class="key thumb thumb-gray"/><text x="231" y="430" class="key-text" style="font-size:8px">0</text>
+  <rect x="250" y="415" width="32" height="24" class="key thumb thumb-gray"/><text x="266" y="430" class="key-text" style="font-size:8px">.</text>
+
+  <!-- SYM LAYER -->
+  <rect x="410" y="280" width="370" height="145" class="layer-box" filter="url(#shadow)"/>
+  <circle cx="425" cy="297" class="dot" fill="#f59e0b"/>
+  <text x="440" y="300" class="layer-title">SYM</text>
+  <text x="478" y="300" class="layer-subtitle">Hold Right Inner Thumb</text>
+  <!-- Left hand - symbols -->
+  <rect x="420" y="310" width="32" height="32" class="key"/><text x="436" y="328" class="key-text">`</text>
+  <rect x="455" y="310" width="32" height="32" class="key"/><text x="471" y="328" class="key-text">&lt;</text>
+  <rect x="490" y="310" width="32" height="32" class="key"/><text x="506" y="328" class="key-text">&gt;</text>
+  <rect x="525" y="310" width="32" height="32" class="key"/><text x="541" y="328" class="key-text">~</text>
+  <rect x="560" y="310" width="32" height="32" class="key"/><text x="576" y="328" class="key-text">^</text>
+  <rect x="420" y="345" width="32" height="32" class="key"/><text x="436" y="363" class="key-text">-</text>
+  <rect x="455" y="345" width="32" height="32" class="key"/><text x="471" y="363" class="key-text">{</text>
+  <rect x="490" y="345" width="32" height="32" class="key"/><text x="506" y="363" class="key-text">}</text>
+  <rect x="525" y="345" width="32" height="32" class="key"/><text x="541" y="363" class="key-text">=</text>
+  <rect x="560" y="345" width="32" height="32" class="key"/><text x="576" y="363" class="key-text">+</text>
+  <rect x="420" y="380" width="32" height="32" class="key"/><text x="436" y="398" class="key-text">_</text>
+  <rect x="455" y="380" width="32" height="32" class="key"/><text x="471" y="398" class="key-text">(</text>
+  <rect x="490" y="380" width="32" height="32" class="key"/><text x="506" y="398" class="key-text">)</text>
+  <rect x="525" y="380" width="32" height="32" class="key"/><text x="541" y="398" class="key-text">[</text>
+  <rect x="560" y="380" width="32" height="32" class="key"/><text x="576" y="398" class="key-text">]</text>
+  <!-- Right hand - mods -->
+  <rect x="605" y="310" width="32" height="32" class="key key-empty"/>
+  <rect x="640" y="310" width="32" height="32" class="key key-empty"/>
+  <rect x="675" y="310" width="32" height="32" class="key key-empty"/>
+  <rect x="710" y="310" width="32" height="32" class="key key-empty"/>
+  <rect x="745" y="310" width="32" height="32" class="key key-empty"/>
+  <rect x="605" y="345" width="32" height="32" class="key key-empty"/>
+  <rect x="640" y="345" width="32" height="32" class="key key-mod"/><text x="656" y="363" class="key-text" style="font-size:8px">Shft</text>
+  <rect x="675" y="345" width="32" height="32" class="key key-mod"/><text x="691" y="363" class="key-text" style="font-size:8px">Gui</text>
+  <rect x="710" y="345" width="32" height="32" class="key key-mod"/><text x="726" y="363" class="key-text" style="font-size:8px">Alt</text>
+  <rect x="745" y="345" width="32" height="32" class="key key-mod"/><text x="761" y="363" class="key-text" style="font-size:8px">Ctrl</text>
+  <rect x="605" y="380" width="32" height="32" class="key key-empty"/>
+  <rect x="640" y="380" width="32" height="32" class="key key-empty"/>
+  <rect x="675" y="380" width="32" height="32" class="key key-empty"/>
+  <rect x="710" y="380" width="32" height="32" class="key key-empty"/>
+  <rect x="745" y="380" width="32" height="32" class="key key-empty"/>
+  <!-- Thumbs -->
+  <rect x="525" y="415" width="32" height="24" class="key thumb thumb-gray"/><text x="541" y="430" class="key-text" style="font-size:8px">:</text>
+  <rect x="560" y="415" width="32" height="24" class="key thumb thumb-gray"/><text x="576" y="430" class="key-text" style="font-size:8px">|</text>
+
+  <!-- FUN LAYER -->
+  <rect x="20" y="435" width="370" height="145" class="layer-box" filter="url(#shadow)"/>
+  <circle cx="35" cy="452" class="dot" fill="#ef4444"/>
+  <text x="50" y="455" class="layer-title">FUN</text>
+  <text x="85" y="455" class="layer-subtitle">Hold Right Outer Thumb</text>
+  <!-- Left hand - mods -->
+  <rect x="30" y="465" width="32" height="32" class="key key-empty"/>
+  <rect x="65" y="465" width="32" height="32" class="key key-empty"/>
+  <rect x="100" y="465" width="32" height="32" class="key key-empty"/>
+  <rect x="135" y="465" width="32" height="32" class="key key-empty"/>
+  <rect x="170" y="465" width="32" height="32" class="key key-empty"/>
+  <rect x="30" y="500" width="32" height="32" class="key key-mod"/><text x="46" y="518" class="key-text" style="font-size:8px">Ctrl</text>
+  <rect x="65" y="500" width="32" height="32" class="key key-mod"/><text x="81" y="518" class="key-text" style="font-size:8px">Alt</text>
+  <rect x="100" y="500" width="32" height="32" class="key key-mod"/><text x="116" y="518" class="key-text" style="font-size:8px">Gui</text>
+  <rect x="135" y="500" width="32" height="32" class="key key-mod"/><text x="151" y="518" class="key-text" style="font-size:8px">Shft</text>
+  <rect x="170" y="500" width="32" height="32" class="key key-empty"/>
+  <rect x="30" y="535" width="32" height="32" class="key key-empty"/>
+  <rect x="65" y="535" width="32" height="32" class="key key-empty"/>
+  <rect x="100" y="535" width="32" height="32" class="key key-empty"/>
+  <rect x="135" y="535" width="32" height="32" class="key key-empty"/>
+  <rect x="170" y="535" width="32" height="32" class="key key-empty"/>
+  <!-- Right hand - F-keys -->
+  <rect x="215" y="465" width="32" height="32" class="key"/><text x="231" y="483" class="key-text" style="font-size:7px">PrtSc</text>
+  <rect x="250" y="465" width="32" height="32" class="key"/><text x="266" y="483" class="key-text" style="font-size:9px">F7</text>
+  <rect x="285" y="465" width="32" height="32" class="key"/><text x="301" y="483" class="key-text" style="font-size:9px">F8</text>
+  <rect x="320" y="465" width="32" height="32" class="key"/><text x="336" y="483" class="key-text" style="font-size:9px">F9</text>
+  <rect x="355" y="465" width="32" height="32" class="key"/><text x="371" y="483" class="key-text" style="font-size:9px">F12</text>
+  <rect x="215" y="500" width="32" height="32" class="key"/><text x="231" y="518" class="key-text" style="font-size:7px">ScrLk</text>
+  <rect x="250" y="500" width="32" height="32" class="key"/><text x="266" y="518" class="key-text" style="font-size:9px">F4</text>
+  <rect x="285" y="500" width="32" height="32" class="key"/><text x="301" y="518" class="key-text" style="font-size:9px">F5</text>
+  <rect x="320" y="500" width="32" height="32" class="key"/><text x="336" y="518" class="key-text" style="font-size:9px">F6</text>
+  <rect x="355" y="500" width="32" height="32" class="key"/><text x="371" y="518" class="key-text" style="font-size:9px">F11</text>
+  <rect x="215" y="535" width="32" height="32" class="key"/><text x="231" y="553" class="key-text" style="font-size:7px">Pause</text>
+  <rect x="250" y="535" width="32" height="32" class="key"/><text x="266" y="553" class="key-text" style="font-size:9px">F1</text>
+  <rect x="285" y="535" width="32" height="32" class="key"/><text x="301" y="553" class="key-text" style="font-size:9px">F2</text>
+  <rect x="320" y="535" width="32" height="32" class="key"/><text x="336" y="553" class="key-text" style="font-size:9px">F3</text>
+  <rect x="355" y="535" width="32" height="32" class="key"/><text x="371" y="553" class="key-text" style="font-size:9px">F10</text>
+
+  <!-- MEDIA LAYER -->
+  <rect x="410" y="435" width="370" height="145" class="layer-box" filter="url(#shadow)"/>
+  <circle cx="425" cy="452" class="dot" fill="#ec4899"/>
+  <text x="440" y="455" class="layer-title">MEDIA</text>
+  <text x="495" y="455" class="layer-subtitle">Both Left Thumbs</text>
+  <!-- Left hand - mods -->
+  <rect x="420" y="465" width="32" height="32" class="key key-empty"/>
+  <rect x="455" y="465" width="32" height="32" class="key key-empty"/>
+  <rect x="490" y="465" width="32" height="32" class="key key-empty"/>
+  <rect x="525" y="465" width="32" height="32" class="key key-empty"/>
+  <rect x="560" y="465" width="32" height="32" class="key key-empty"/>
+  <rect x="420" y="500" width="32" height="32" class="key key-mod"/><text x="436" y="518" class="key-text" style="font-size:8px">Ctrl</text>
+  <rect x="455" y="500" width="32" height="32" class="key key-mod"/><text x="471" y="518" class="key-text" style="font-size:8px">Alt</text>
+  <rect x="490" y="500" width="32" height="32" class="key key-mod"/><text x="506" y="518" class="key-text" style="font-size:8px">Gui</text>
+  <rect x="525" y="500" width="32" height="32" class="key key-mod"/><text x="541" y="518" class="key-text" style="font-size:8px">Shft</text>
+  <rect x="560" y="500" width="32" height="32" class="key key-empty"/>
+  <rect x="420" y="535" width="32" height="32" class="key key-empty"/>
+  <rect x="455" y="535" width="32" height="32" class="key key-empty"/>
+  <rect x="490" y="535" width="32" height="32" class="key key-empty"/>
+  <rect x="525" y="535" width="32" height="32" class="key key-empty"/>
+  <rect x="560" y="535" width="32" height="32" class="key key-empty"/>
+  <!-- Right hand - media -->
+  <rect x="605" y="465" width="32" height="32" class="key key-empty"/>
+  <rect x="640" y="465" width="32" height="32" class="key key-empty"/>
+  <rect x="675" y="465" width="32" height="32" class="key key-empty"/>
+  <rect x="710" y="465" width="32" height="32" class="key key-empty"/>
+  <rect x="745" y="465" width="32" height="32" class="key key-empty"/>
+  <rect x="605" y="500" width="32" height="32" class="key"/><text x="621" y="518" class="key-text">⏮</text>
+  <rect x="640" y="500" width="32" height="32" class="key"/><text x="656" y="518" class="key-text">🔉</text>
+  <rect x="675" y="500" width="32" height="32" class="key"/><text x="691" y="518" class="key-text">🔊</text>
+  <rect x="710" y="500" width="32" height="32" class="key"/><text x="726" y="518" class="key-text">⏭</text>
+  <rect x="745" y="500" width="32" height="32" class="key key-empty"/>
+  <rect x="605" y="535" width="32" height="32" class="key key-empty"/>
+  <rect x="640" y="535" width="32" height="32" class="key key-empty"/>
+  <rect x="675" y="535" width="32" height="32" class="key key-empty"/>
+  <rect x="710" y="535" width="32" height="32" class="key key-empty"/>
+  <rect x="745" y="535" width="32" height="32" class="key key-empty"/>
+  <!-- Thumbs -->
+  <rect x="710" y="570" width="32" height="24" class="key thumb thumb-gray"/><text x="726" y="585" class="key-text">⏹</text>
+  <rect x="745" y="570" width="32" height="24" class="key thumb thumb-gray"/><text x="761" y="585" class="key-text">⏯</text>
+
+  <!-- SETTINGS LAYER -->
+  <rect x="20" y="590" width="760" height="145" class="layer-box" filter="url(#shadow)"/>
+  <circle cx="35" cy="607" class="dot" fill="#6366f1"/>
+  <text x="50" y="610" class="layer-title">SETTINGS</text>
+  <text x="130" y="610" class="layer-subtitle">Both Inner Thumbs</text>
+  <!-- Left hand -->
+  <rect x="30" y="620" width="32" height="32" class="key"/><text x="46" y="638" class="key-text" style="font-size:7px">Boot</text>
+  <rect x="65" y="620" width="32" height="32" class="key key-empty"/>
+  <rect x="100" y="620" width="32" height="32" class="key key-empty"/>
+  <rect x="135" y="620" width="32" height="32" class="key"/><text x="151" y="638" class="key-text" style="font-size:6px">BT CLR</text>
+  <rect x="170" y="620" width="32" height="32" class="key"/><text x="186" y="638" class="key-text" style="font-size:7px">BT 0</text>
+  <rect x="30" y="655" width="32" height="32" class="key key-empty"/>
+  <rect x="65" y="655" width="32" height="32" class="key key-empty"/>
+  <rect x="100" y="655" width="32" height="32" class="key key-empty"/>
+  <rect x="135" y="655" width="32" height="32" class="key key-empty"/>
+  <rect x="170" y="655" width="32" height="32" class="key"/><text x="186" y="673" class="key-text" style="font-size:7px">BT 1</text>
+  <rect x="30" y="690" width="32" height="32" class="key"/><text x="46" y="708" class="key-text" style="font-size:6px">Studio</text>
+  <rect x="65" y="690" width="32" height="32" class="key key-empty"/>
+  <rect x="100" y="690" width="32" height="32" class="key key-empty"/>
+  <rect x="135" y="690" width="32" height="32" class="key key-empty"/>
+  <rect x="170" y="690" width="32" height="32" class="key"/><text x="186" y="708" class="key-text" style="font-size:7px">BT 2</text>
+  <!-- Right hand -->
+  <rect x="215" y="620" width="32" height="32" class="key"/><text x="231" y="638" class="key-text" style="font-size:7px">BT 3</text>
+  <rect x="250" y="620" width="32" height="32" class="key key-empty"/>
+  <rect x="285" y="620" width="32" height="32" class="key key-empty"/>
+  <rect x="320" y="620" width="32" height="32" class="key key-empty"/>
+  <rect x="355" y="620" width="32" height="32" class="key"/><text x="371" y="638" class="key-text" style="font-size:7px">Boot</text>
+  <rect x="215" y="655" width="32" height="32" class="key"/><text x="231" y="673" class="key-text" style="font-size:7px">BT 4</text>
+  <rect x="250" y="655" width="32" height="32" class="key key-empty"/>
+  <rect x="285" y="655" width="32" height="32" class="key key-empty"/>
+  <rect x="320" y="655" width="32" height="32" class="key key-empty"/>
+  <rect x="355" y="655" width="32" height="32" class="key key-empty"/>
+  <rect x="215" y="690" width="32" height="32" class="key"/><text x="231" y="708" class="key-text" style="font-size:7px">BT 5</text>
+  <rect x="250" y="690" width="32" height="32" class="key key-empty"/>
+  <rect x="285" y="690" width="32" height="32" class="key key-empty"/>
+  <rect x="320" y="690" width="32" height="32" class="key key-empty"/>
+  <rect x="355" y="690" width="32" height="32" class="key"/><text x="371" y="708" class="key-text" style="font-size:6px">Studio</text>
+
+  <!-- Legend -->
+  <rect x="420" y="620" width="350" height="100" rx="8" fill="#1f2937" stroke="#374151"/>
+  <text x="440" y="640" class="section-title">📋 Legend</text>
+  <rect x="440" y="655" width="20" height="20" class="key key-mod" style="stroke-width:0.5"/>
+  <text x="470" y="668" class="legend-text">Homerow Mod (hold for modifier)</text>
+  <rect x="440" y="680" width="20" height="20" class="key" style="stroke-width:0.5"/>
+  <text x="470" y="693" class="legend-text">Regular Key</text>
+  <rect x="440" y="705" width="20" height="20" class="key key-empty" style="stroke-width:0.5"/>
+  <text x="470" y="718" class="legend-text">Empty / Transparent</text>
+  <rect x="600" y="655" width="20" height="20" class="key thumb thumb-nav" style="stroke-width:0.5"/>
+  <text x="630" y="668" class="legend-text">Thumb: Hold layer / Tap key</text>
+  <text x="600" y="700" class="legend-text" style="fill:#a78bfa">CAGS = Ctrl, Alt, Gui, Shift</text>
+
+  <!-- Footer -->
+  <text x="400" y="760" class="main-subtitle" text-anchor="middle">Thumb keys: Hold for layer • Tap for key shown</text>
+</svg>
