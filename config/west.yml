@@ -10,6 +10,8 @@ manifest:
     - name: duckyb
       url-base: https://github.com/duckyb
       # nice-view-gem
+    - name: dnaq
+      url-base: https://github.com/dnaq
     - name: m165437
       url-base: https://github.com/M165437
   projects:
@@ -19,6 +21,9 @@ manifest:
       import: app/west.yml
     - name: urchin-zmk-module
       remote: duckyb
+      revision: main
+    - name: zmk-plover-hid
+      remote: dnaq
       revision: main
     - name: nice-view-gem
       remote: m165437

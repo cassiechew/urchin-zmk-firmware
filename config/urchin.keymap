@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/plvr.h>
 
 // Layer definitions
 #define BASE 0
@@ -11,6 +12,7 @@
 #define MEDIA 5
 #define MOUSE 6
 #define SETTINGS 7
+#define STENO 8
 
 // Homerow mod config (CAGS)
 #define HRML(k1,k2,k3,k4) &ht LCTRL k1  &ht LALT k2  &ht LGUI k3  &ht LSHFT k4
@@ -76,8 +78,15 @@
         // Both inner thumbs = Settings
         combo_settings {
             timeout-ms = <50>;
-            key-positions = <30 32>;
+            key-positions = <31 32>;
             bindings = <&mo SETTINGS>;
+        };
+
+        // Both outer thumbs = Steno
+        combo_steno {
+            timeout-ms = <50>;
+            key-positions = <30 33>;
+            bindings = <&to STENO>;
         };
     };
 
@@ -161,6 +170,16 @@
                 &none       &none      &none      &none       &bt BT_SEL 1   &bt BT_SEL 4 &none      &none      &none      &none
                 &studio_unlock &none   &none      &none       &bt BT_SEL 2   &bt BT_SEL 5 &none      &none      &none      &studio_unlock
                                                   &trans      &none          &none        &trans
+            >;
+        };
+
+        steno_layer {
+            display-name = "STENO";
+            bindings = <
+                &plvr SL    &plvr TL   &plvr PL   &plvr HL    &plvr ST       &plvr FR   &plvr PR    &plvr LR   &plvr TR   &plvr DR
+                &plvr NM    &plvr KL   &plvr WL   &plvr RL    &plvr ST       &plvr RR   &plvr BR    &plvr GR   &plvr SR   &plvr ZR
+                &to BASE    &none      &none      &none       &none          &plvr ST   &none       &none      &none      &none
+                                                  &plvr A     &plvr O        &plvr E    &plvr U
             >;
         };
     };
